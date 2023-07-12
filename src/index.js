@@ -12,7 +12,9 @@ app.use("/auth",userRouter);
 app.use("/tblogs", tblogRouter);
 
 
+const port = process.env.PORT | 5000;
+
 mongoose.connect("mongodb+srv://akilanvb21:Akilan%4021@tblog.fsmwrg6.mongodb.net/travel_blog").then(() => console.log("DATABASE CONNECTED!!"));
-app.listen(5000,() => console.log("SERVER RUNNING!!"));
+app.listen(port,() => console.log("SERVER RUNNING!!"));
 
 
